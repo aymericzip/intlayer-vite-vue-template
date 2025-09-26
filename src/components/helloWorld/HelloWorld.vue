@@ -1,6 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useIntlayer } from 'vue-intlayer';
+import { ref } from "vue";
+import { useIntlayer } from "vue-intlayer";
+import { useNumber, useDate, useCurrency } from "vue-intlayer/format";
+
+const number = useNumber();
+const date = useDate();
+const currency = useCurrency();
 
 defineProps({
   msg: String,
@@ -14,7 +19,7 @@ const {
   officialStarter,
   learnMore,
   readTheDocs,
-} = useIntlayer('hello-world');
+} = useIntlayer("hello-world");
 const countRef = ref(0);
 </script>
 
@@ -25,6 +30,12 @@ const countRef = ref(0);
       {{ countRef }}
     </button>
     <p v-html="edit"></p>
+  </div>
+
+  <div>
+    <p>{{ number(1234567890) }}</p>
+    <p>{{ date(new Date()) }}</p>
+    <p>{{ currency(1234567890) }}</p>
   </div>
 
   <mdTest />

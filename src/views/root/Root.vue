@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useIntlayer } from 'vue-intlayer';
-import HelloWorld from '@components/helloWorld/HelloWorld.vue';
+import { useIntlayer } from "vue-intlayer";
+import HelloWorld from "../../components/helloWorld/HelloWorld.vue";
 
-const { viteLogo, vueLogo, title } = useIntlayer('root');
+const { viteLogo, vueLogo, title } = useIntlayer("root");
 </script>
 
 <template>
