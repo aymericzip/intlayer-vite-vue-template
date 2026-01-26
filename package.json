@@ -10,10 +10,10 @@
     "start:editor": "npx intlayer-editor start"
   },
   "dependencies": {
-    "intlayer": "latest",
+    "intlayer": "8.0.0-canary.5",
     "js-cookie": "^3.0.5",
     "markdown-it": "^14.1.0",
-    "vite-intlayer": "latest",
+    "vite-intlayer": "8.0.0-canary.5",
     "vue": "^3.5.22",
     "vue-intlayer": "latest",
     "vue-router": "^4.5.1"

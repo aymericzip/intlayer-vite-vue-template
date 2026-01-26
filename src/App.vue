@@ -2,18 +2,23 @@
 import { useI18nHTMLAttributes } from "./composables/useI18nHTMLAttributes";
 import LocaleSwitcher from "./components/LocaleSwitcher.vue";
 import RouterLink from "./components/RouterLink.vue";
+import { Suspense } from "vue";
 
 // Apply HTML language attributes based on current locale
 useI18nHTMLAttributes();
 </script>
 
 <template>
-  <nav>
-    <RouterLink to="/">Root</RouterLink>
-    <RouterLink to="/home">Home</RouterLink>
-    <LocaleSwitcher />
-  </nav>
-  <RouterView />
+  <Suspense>
+    <div>
+      <nav>
+        <RouterLink to="/">Root</RouterLink>
+        <RouterLink to="/home">Home</RouterLink>
+        <LocaleSwitcher />
+      </nav>
+      <RouterView />
+    </div>
+  </Suspense>
 </template>
 
 <style>

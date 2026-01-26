@@ -1,9 +1,9 @@
-import MarkdownIt from 'markdown-it';
-import { createApp, h } from 'vue';
-import { installIntlayer, installIntlayerMarkdown } from 'vue-intlayer';
-import App from './App.vue';
-import { router } from './routes';
-import './style.css';
+import MarkdownIt from "markdown-it";
+import { createApp, h } from "vue";
+import { installIntlayer, installIntlayerMarkdown } from "vue-intlayer";
+import App from "./App.vue";
+import { router } from "./routes";
+import "./style.css";
 
 const app = createApp(App);
 
@@ -22,8 +22,8 @@ const md = new MarkdownIt({
 // Tell Intlayer to use md.render() whenever it needs to turn markdown into HTML
 installIntlayerMarkdown(app, (markdown) => {
   const html = md.render(markdown);
-  return h('div', { innerHTML: html });
+  return h("div", { innerHTML: html });
 });
 
 // Mount the app
-app.mount('#app');
+app.mount("#app");
