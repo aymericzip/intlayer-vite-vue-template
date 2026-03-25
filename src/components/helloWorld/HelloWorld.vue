@@ -8,7 +8,7 @@ const date = useDate();
 const currency = useCurrency();
 
 defineProps({
-  msg: String,
+  msg: [String, Object, Function],
 });
 
 const {
