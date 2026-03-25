@@ -12,7 +12,6 @@ app.use(router);
 
 app.use(intlayer);
 
-// Tell Intlayer to use md.render() whenever it needs to turn markdown into HTML
 app.use(intlayerMarkdown, {
   components: {
     h1: (props) =>
