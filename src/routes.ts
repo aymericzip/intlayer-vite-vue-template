@@ -1,16 +1,16 @@
 import {
   configuration,
-  getPathWithoutLocale,
+  getLocalizedUrl,
+  Locale,
   localeFlatMap,
-  type Locales,
-} from 'intlayer';
-import { createIntlayerClient } from 'vue-intlayer';
-import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from './views/home/HomeView.vue';
-import RootView from './views/root/Root.vue';
+} from "intlayer";
+import { createIntlayerClient } from "vue-intlayer";
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "./views/home/HomeView.vue";
+import RootView from "./views/root/Root.vue";
 
 // Get internationalization configuration
-const { internationalization, middleware } = configuration;
+const { internationalization } = configuration;
 const { defaultLocale } = internationalization;
 
 const routes = localeFlatMap((localizedData) => [
@@ -42,7 +42,7 @@ export const router = createRouter({
 router.beforeEach((to, _from, next) => {
   const client = createIntlayerClient();
 
-  const metaLocale = to.meta.locale as Locales | undefined;
+  const metaLocale = to.meta.locale as Locale | undefined;
 
   if (metaLocale) {
     // Reuse the locale defined in the route meta
@@ -53,10 +53,8 @@ router.beforeEach((to, _from, next) => {
     // Optional: handle 404 or redirect to default locale
     client.setLocale(defaultLocale);
 
-    if (middleware.prefixDefault) {
-      next(`/${defaultLocale}${getPathWithoutLocale(to.path)}`);
-    } else {
-      next(getPathWithoutLocale(to.path));
-    }
+    const prefix = getLocalizedUrl(to.path);
+
+    next(prefix);
   }
 });
