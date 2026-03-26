@@ -13,16 +13,16 @@
     "intlayer": "latest",
     "js-cookie": "^3.0.5",
     "vite-intlayer": "latest",
-    "vue": "^3.5.30",
+    "vue": "^3.5.31",
     "vue-intlayer": "latest",
     "vue-router": "^5.0.4"
   },
   "devDependencies": {
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^25.5.0",
-    "@vitejs/plugin-vue": "^6.0.1",
+    "@vitejs/plugin-vue": "^6.0.5",
     "intlayer-editor": "latest",
-    "vite": "^8.0.2",
+    "vite": "^8.0.3",
     "vue-demi": "^0.14.10"
   }
 }
