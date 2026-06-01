@@ -1,5 +1,5 @@
 import {
-  configuration,
+  defaultLocale,
   getLocalizedUrl,
   Locale,
   localeFlatMap,
@@ -10,8 +10,6 @@ import HomeView from "./views/home/HomeView.vue";
 import RootView from "./views/root/Root.vue";
 
 // Get internationalization configuration
-const { internationalization } = configuration;
-const { defaultLocale } = internationalization;
 
 const routes = localeFlatMap((localizedData) => [
   {
