@@ -10,18 +10,18 @@
     "start:editor": "npx intlayer-editor start"
   },
   "dependencies": {
-    "intlayer": "latest",
+    "intlayer": "9.0.0-canary.12",
     "js-cookie": "^3.0.5",
-    "vite-intlayer": "latest",
+    "vite-intlayer": "9.0.0-canary.12",
     "vue": "^3.5.31",
-    "vue-intlayer": "latest",
+    "vue-intlayer": "9.0.0-canary.12",
     "vue-router": "^5.0.4"
   },
   "devDependencies": {
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^25.5.0",
     "@vitejs/plugin-vue": "^6.0.5",
-    "intlayer-editor": "latest",
+    "intlayer-editor": "9.0.0-canary.12",
     "vite": "^8.0.3",
     "vue-demi": "^0.14.10"
   }
